@@ -7,7 +7,7 @@ import requests
 #go to the British Fencing Association website and download this file (specified)
 url = "https://www.britishfencing.com/wp-content/uploads/2018/10/mf_oct_2018.xls"
 downloaded_file = requests.get(url)
-#write the contents to a new file called test.xls
+#write the contents to a new file called rankings.xls
 with open("rankings.xls", 'wb') as file:
     file.write(downloaded_file.content)
 
@@ -27,11 +27,11 @@ worksheet1 = workbook.add_sheet("Club BFA ranking")
 worksheet1.write(0, 0, "Ranking")
 #in cell 0,1 (second cell of the first row) write "Name"
 worksheet1.write(0, 1, "Name")  
-#in cell 0,2 (second cell of the first row) write "NIF"
+#in cell 0,2 (third cell of the first row) write "NIF"
 worksheet1.write(0, 2, "NIF")
-#in cell 0,1 (second cell of the first row) write "Points"
+#in cell 0,1 (fourth cell of the first row) write "Points"
 worksheet1.write(0, 3, "Points") 
-#in cell 0,1 (second cell of the first row) write "Homw country"
+#in cell 0,1 (fifth cell of the first row) write "Home country"
 worksheet1.write(0, 4, "Home country") 
 #save and create the spreadsheet file
 workbook.save("saxons.xls")
