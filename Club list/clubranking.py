@@ -79,7 +79,7 @@ club = "Saxon"
 for i in range(first_sheet.nrows):
     if(club in first_sheet.cell_value(i,3)):  
         name.append(first_sheet.cell_value(i,1))
-        rank.append(first_sheet.cell_value(i,8))
+        rank.append(first_sheet.cell_value(i,0))
         NIF.append (first_sheet.cell_value(i,9))
         points.append (first_sheet.cell_value(i,10))
         hc.append (first_sheet.cell_value(i,6))
@@ -88,7 +88,7 @@ for i in range(first_sheet.nrows):
 for i in range(second_sheet.nrows):
     if(club in second_sheet.cell_value(i,3)):  
         name.append(second_sheet.cell_value(i,1))
-        rank.append(second_sheet.cell_value(i,8))
+        rank.append(second_sheet.cell_value(i,0))
         NIF.append (second_sheet.cell_value(i,9))
         points.append (second_sheet.cell_value(i,10))
         hc.append (second_sheet.cell_value(i,6))
